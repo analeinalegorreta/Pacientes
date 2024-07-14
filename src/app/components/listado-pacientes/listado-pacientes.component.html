@@ -1,0 +1,44 @@
+<h2 class=" font-black text-3xl text-center">Listado de Pcientes</h2>
+<p class=" text-xl mt-5 mb-10 text-center">
+  Administra tus
+  <span class=" text-indigo-600 font-bold "> Pacientes y Citas</span>
+</p>
+
+<h2 class=" font-black text-3xl text-center"> No hay pacientes</h2>
+<p class=" text-xl mt-5 mb-10 text-center">
+  Comienza agregando pacientes
+  <span class=" text-indigo-600 font-bold"> y aparecerán en este lugar</span>
+</p>
+
+
+<div class=" mx-5 my-10 px-5 py-10 bg-white shadow-md rounded-xl" *ngFor="let paciente of getdetallePaciente()">
+
+
+  <label class="text-sm uppercase font-bold">
+    ID :{{paciente.id}}
+  </label><br>
+  <label class="text-sm uppercase font-bold">
+    Nombre :{{paciente.nombre}}
+  </label><br>
+  <label class="text-sm uppercase font-bold">
+    Propietario :{{paciente.propietario}}
+  </label><br>
+  <label class="text-sm uppercase font-bold">
+    Email :{{paciente.email}}
+  </label><br>
+  <label class="text-sm uppercase font-bold">
+    Fecha Alta :{{paciente.fecha}}
+  </label><br>
+  <label class="text-sm uppercase font-bold">
+    Síntomas :{{paciente.sintomas}}
+  </label>
+
+
+  <div class=" flex flex-col lg:flex-row gap- justify-between  mt-10">
+    <button class=" py-2 px-10 bg-indigo-600 hover:bg-indigo-700 text-white font-bold uppercase rounded-lg "
+      type="button" (click)="editarPaciente(paciente)"> Editar</button>
+    <button class=" py-2 px-10 bg-red-600 hover:bg-red-700 text-white font-bold uppercase rounded-lg " type="button"
+      > Eliminar</button>
+  </div>
+
+</div>
