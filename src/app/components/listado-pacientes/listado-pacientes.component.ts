@@ -25,6 +25,9 @@ export class ListadoPacientesComponent {
      this.PacientesServiceService.preparandoEdicionPaciente(paciente)
   }
 
+  eliminarPaciente(paciente:Paciente) {
+    this.PacientesServiceService.eliminarPaciente(paciente)
+ }
 
 
 }

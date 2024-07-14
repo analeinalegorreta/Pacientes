@@ -46,12 +46,11 @@ export class PacientesServiceService {
     }
 
 
-
-
-
-
   }
 
-
+  eliminarPaciente(paciente: Paciente){
+    let resp = this.detallePaciente.findIndex(obj => obj.id === paciente.id);
+    this.detallePaciente.splice(resp, 1)
+  }
 
 }
